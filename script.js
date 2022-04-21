@@ -4,6 +4,14 @@ function compute()
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
-    var year = new Date()
+    var year = new Date().getFullYear()+parseInt(years);
 }
+function updateRate()
+{
+    var rateval = document.getElementById("rate").value;
+    document.getElementById("rate_val").innerText=rateval;
+    
+}
+var rangeinput = document.getElementById("rate");
+rangeinput.addEventListener("onchange", updateRate);
         
