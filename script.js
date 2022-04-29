@@ -1,4 +1,5 @@
-function compute()
+var result = document.getElementById("result");
+result.onclick = function compute()
 {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
@@ -15,7 +16,6 @@ function updateRate()
 var rangeinput = document.getElementById("rate");
 rangeinput.onchange = updateRate;
 
-var result = document.getElementById("result");
-result.onclick = compute;
+
 
 document.getElementById("result").innerHTML="If you deposit"+principal+",\<br\> at an interest rate of"+rate+", \<br\> you will receive an amount of"+result+"\<br\> in the year"+year;
