@@ -1,5 +1,7 @@
-var result = document.getElementById("result");
-result.onclick = function compute()
+
+let btn = document.createElement("button");
+//var result = document.getElementById("result");
+btn.onclick = function compute()
 {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
