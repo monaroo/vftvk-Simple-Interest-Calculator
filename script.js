@@ -9,7 +9,7 @@ btn.onclick = function compute()
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
-    //let year = new Date().getFullYear()+parseInt();
+    let year = new Date().getFullYear()+parseInt();
 }
 function updateRate()
 {
