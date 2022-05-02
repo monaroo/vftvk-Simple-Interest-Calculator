@@ -1,13 +1,13 @@
 
 
-let year = new Date().getFullYear()+parseInt();
+//let year = new Date().getFullYear()+parseInt();
 let btn = document.createElement("button");
 //var result = document.getElementById("result");
 btn.onclick = function compute()
 {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
+    let years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
     let year = new Date().getFullYear()+parseInt();
 }
