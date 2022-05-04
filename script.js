@@ -6,6 +6,10 @@ let btn = document.getElementById("compute");
 btn.onclick = function ()
 {
     var principal = document.getElementById("principal").value;
+        if (principal < 1)  
+        {
+            alert("Please enter a positive number.");
+        }
     var rate = document.getElementById("rate").value;
     let years = document.getElementById("years").value;
     var interest = principal * years * rate / 100;
