@@ -6,13 +6,14 @@ let btn = document.getElementById("compute");
 btn.onclick = function ()
 {
     var principal = document.getElementById("principal").value;
-        if (principal < 1)  
+        if (principal < 1 || principal == "")
         {
             alert("Please enter a positive number.");
+            document.getElementById("principal").focus();
         }
     var rate = document.getElementById("rate").value;
     let years = document.getElementById("years").value;
-    var interest = principal * years * rate / 100;
+    var interest = (principal * years * rate / 100).toFixed(2);
     let year = new Date().getFullYear();
 
     //debugValue("years", years);
@@ -21,10 +22,10 @@ btn.onclick = function ()
     //debugValue("Number(years)+year", Number(years)+year);
 
 
-    document.getElementById("result").innerHTML = "If you deposit $"+principal+
-        "\<br\> at an interest rate of "+rate+
-        "% , \<br\> you will receive an amount of $"+interest+
-        "\<br\> in the year "+(Number(years)+year);
+    document.getElementById("result").innerHTML = "If you deposit <span class=output>$"+principal+
+        "</span>\<br\> at an interest rate of <span class=output>"+rate+
+        "% </span>, \<br\> you will receive an amount of <span class=output>$"+interest+
+        "</span>\<br\> in the year <span class=output>"+(Number(years)+year)+"</span>";
 }
 
 function debugValue(name, value) {
